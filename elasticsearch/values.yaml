@@ -157,10 +157,9 @@ client:
     enabled: false
     # user: NAME
     # password: PASSWORD
-    annotations: {}
+    annotations: 
       kubernetes.io/ingress.class: nginx
       certmanager.k8s.io/cluster-issuer: letsencrypt-fuchicorp-prod
-    
     path: /
     hosts:
       - test-elk.fuchicorp.com
