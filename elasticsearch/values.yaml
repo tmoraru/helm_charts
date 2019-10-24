@@ -127,10 +127,10 @@ client:
   # terminationGracePeriodSeconds: 60
   initResources: {}
     # limits:
-    #   cpu: "25m"
+    #   cpu: "10m"
     #   # memory: "128Mi"
     # requests:
-    #   cpu: "25m"
+    #   cpu: "10m"
     #   memory: "128Mi"
   resources:
     limits:
@@ -192,17 +192,17 @@ master:
   # terminationGracePeriodSeconds: 60
   initResources: {}
     # limits:
-    #   cpu: "25m"
+    #   cpu: "10m"
     #   # memory: "128Mi"
     # requests:
-    #   cpu: "25m"
+    #   cpu: "10m"
     #   memory: "128Mi"
   resources:
     limits:
       cpu: "1"
       # memory: "1024Mi"
     requests:
-      cpu: "25m"
+      cpu: "10m"
       memory: "512Mi"
   priorityClassName: ""
   ## (dict) If specified, apply these annotations to each master Pod
@@ -246,10 +246,10 @@ data:
   tolerations: []
   initResources: {}
     # limits:
-    #   cpu: "25m"
+    #   cpu: "10m"
     #   # memory: "128Mi"
     # requests:
-    #   cpu: "25m"
+    #   cpu: "10m"
     #   memory: "128Mi"
   resources:
     limits:
