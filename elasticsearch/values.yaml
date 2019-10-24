@@ -137,7 +137,7 @@ client:
       cpu: "1"
       # memory: "1024Mi"
     requests:
-      cpu: "25m"
+      cpu: "10m"
       memory: "512Mi"
   priorityClassName: ""
   ## (dict) If specified, apply these annotations to each client Pod
@@ -154,7 +154,7 @@ client:
     ## (string) Script to execute after the client pod starts.
     # postStart: |-
   ingress:
-    enabled: false
+    enabled: true
     # user: NAME
     # password: PASSWORD
     annotations: 
@@ -232,7 +232,7 @@ data:
     enabled: true
     accessMode: ReadWriteOnce
     name: data
-    size: "30Gi"
+    size: "10Gi"
     # storageClass: "ssd"
   readinessProbe:
     httpGet:
@@ -256,8 +256,8 @@ data:
       cpu: "1"
       # memory: "2048Mi"
     requests:
-      cpu: "25m"
-      memory: "1536Mi"
+      cpu: "10m"
+      memory: "1000Mi"
   priorityClassName: ""
   ## (dict) If specified, apply these annotations to each data Pod
   # podAnnotations:
