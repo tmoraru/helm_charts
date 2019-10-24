@@ -112,24 +112,25 @@ service:
   portName: service
 
 ingress:
-  enabled: false
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    certmanager.k8s.io/cluster-issuer: letsencrypt-fuchicorp-prod    
     # kubernetes.io/tls-acme: "true"
-  labels: {}
-  path: /
+  # labels: {}
+  # path: /
   hosts:
-    - chart-example.local
+    - test.grafana.fuchicorp.com
   ## Extra paths to prepend to every host configuration. This is useful when working with annotation based services.
   extraPaths: []
   # - path: /*
   #   backend:
   #     serviceName: ssl-redirect
   #     servicePort: use-annotation
-  tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
+  tls:
+   - secretName: grafana-tls
+     hosts:
+       - test.grafana.fuchicorp.com
 
 resources: {}
 #  limits:
