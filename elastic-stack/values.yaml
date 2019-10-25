@@ -47,18 +47,18 @@ nginx-ldapauth-proxy:
   #   requires:
   #     - name: "ELK-USER"
   #       filter: "cn=elkuser,ou=groups,dc=example,dc=com"
-  # ingress:
-  #   enabled: true
-  #   hosts:
-  #     - "elk.example.com"
-  #   annotations:
-  #     kubernetes.io/ingress.class: nginx
-  #   tls:
-  #     - hosts:
-  #       - elk.example.com
-  #       secretName: example-elk-tls
-  # secrets:
-  #   ldapBindPassword: PASSWORD
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    certmanager.k8s.io/cluster-issuer: letsencrypt-fuchicorp-prod
+  path: /
+  hosts:
+    - test-elk.fuchicorp.com
+  tls:
+   - secretName: test-elk-tls
+     hosts:
+       - test-elk.fuchicorp.com
 elasticsearch-curator:
   enabled: false
 

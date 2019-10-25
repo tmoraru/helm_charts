@@ -6,9 +6,6 @@ name: elastic-stack
 version: 1.8.0
 appVersion: 6.0
 maintainers:
-- name: rendhalver
-  email: pete.brown@powerhrg.com
-- name: jar361
-  email: jrodgers@powerhrg.com
-- name: christian-roggia
-  email: christian.roggia@gmail.com
+  - name: FuchiCorp
+    email: fuchicorpsolution@gmail.com
+    url: https://github.com/fuchicorp
