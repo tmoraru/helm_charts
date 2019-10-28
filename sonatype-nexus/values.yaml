@@ -33,7 +33,7 @@ nexus:
   dockerPort: 5003
   nexusPort: 8081
   service:
-    type: NodePort
+    type: ClusterIP
     # clusterIP: None
   # annotations: {}
   # labels: {}
@@ -53,11 +53,11 @@ nexus:
     # timeoutSeconds: 10
     path: /
   # hostAliases allows the modification of the hosts file inside a container
-  hostAliases: []
+  hostAliases:
   # - ip: "192.168.1.10"
-  #   hostnames:
-  #   - "example.com"
-  #   - "www.example.com"
+    # hostnames:
+    # - "test.nexus.fuchicorp.com"
+    # - "test.docker.fuchicorp.com"
 
 route:
   enabled: false
@@ -78,7 +78,7 @@ nexusProxy:
   # labels: {}
   env:
     nexusDockerHost:
-    nexusHttpHost:
+    nexusHttpHost: test.nexus.fuchicorp.com
     enforceHttps: false
     cloudIamAuthEnabled: false
 ## If cloudIamAuthEnabled is set to true uncomment the variables below and remove this line
@@ -144,12 +144,13 @@ nexusBackup:
     # fsType: ext4
 
 ingress:
-  enabled: false
+  enabled: true
   path: /
-  annotations: {}
+  annotations:
   # # NOTE: Can't use 'false' due to https://github.com/jetstack/kube-lego/issues/173.
   # kubernetes.io/ingress.allow-http: true
-  # kubernetes.io/ingress.class: gce
+    kubernetes.io/ingress.class: nginx
+    certmanager.k8s.io/cluster-issuer: letsencrypt-fuchicorp-prod
   # kubernetes.io/ingress.global-static-ip-name: ""
   # kubernetes.io/tls-acme: true
   tls:
@@ -169,7 +170,7 @@ tolerations: []
 
 # # Enable configmap and add data in configmap
 config:
-  enabled: false
+  enabled: true
   mountPath: /sonatype-nexus-conf
   data:
 
