@@ -11,8 +11,8 @@ kibana:
 
 logstash:
   enabled: true
-    elasticsearch:
-      host: elastic-stack-elasticsearch-client
+  elasticsearch:
+    host: elastic-stack-elasticsearch-client
 
 filebeat:
   enabled: true
