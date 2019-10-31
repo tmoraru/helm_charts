@@ -8,7 +8,5 @@ home: https://www.elastic.co/products/beats/filebeat
 sources:
 - https://www.elastic.co/guide/en/beats/filebeat/current/index.html
 maintainers:
-- name: rendhalver
-  email: pete.brown@powerhrg.com
-- name: sstarcher
-  email: shane.starcher@gmail.com
+  - name: FuchiCorp
+    email: fuchicorpsolution@gmail.com

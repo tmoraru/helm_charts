@@ -7,12 +7,10 @@ icon: https://raw.githubusercontent.com/elastic/kibana/master/src/ui/public/icon
 keywords:
 - elasticsearch
 - kibana
-maintainers:
-- name: compleatang
-  email: casey@monax.io
-- name: monotek
-  email: monotek23@gmail.com
 sources:
 - https://github.com/elastic/kibana
 engine: gotpl
 home: https://www.elastic.co/products/kibana
+maintainers:
+  - name: FuchiCorp
+    email: fuchicorpsolution@gmail.com

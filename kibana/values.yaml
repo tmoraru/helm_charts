@@ -37,8 +37,8 @@ files:
     ## Default Kibana configuration from kibana-docker.
     server.name: kibana
     server.host: "0"
-    ## For kibana < 6.6, use elasticsearch.url instead
-    elasticsearch.hosts: http://elasticsearch:9200
+    ## For kibana < 6.6, use elasticsearch.url instead 
+    elasticsearch.hosts: test-elasticsearch.fuchicorp.com      # http://elasticsearch:9200
 
     ## Custom config properties below
     ## Ref: https://www.elastic.co/guide/en/kibana/current/settings.html
@@ -81,13 +81,16 @@ ingress:
   # hosts:
     # - kibana.localhost.localdomain
     # - localhost.localdomain/kibana
-  # annotations:
-  #   kubernetes.io/ingress.class: nginx
-  #   kubernetes.io/tls-acme: "true"
-  # tls:
-    # - secretName: chart-example-tls
-    #   hosts:
-    #     - chart-example.local
+  annotations: 
+    kubernetes.io/ingress.class: nginx
+    certmanager.k8s.io/cluster-issuer: letsencrypt-fuchicorp-prod
+  path: /
+  hosts:
+    - test-kibana.fuchicorp.com
+  tls: 
+    - secretName: 
+      hosts:
+        - test-kibana.fuchicorp.com
 
 serviceAccount:
   # Specifies whether a service account should be created

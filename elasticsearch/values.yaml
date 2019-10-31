@@ -162,11 +162,11 @@ client:
       certmanager.k8s.io/cluster-issuer: letsencrypt-fuchicorp-prod
     path: /
     hosts:
-      - test-elk.fuchicorp.com
+      - test-elasticsearch.fuchicorp.com
     tls: 
       - secretName: 
          hosts:
-           - test-elk.fuchicorp.com
+           - test-elasticsearch.fuchicorp.com
 
 master:
   name: master
