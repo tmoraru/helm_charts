@@ -171,14 +171,14 @@ client:
 master:
   name: master
   exposeHttp: false
-  replicas: 3
+  replicas: 1
   heapSize: "512m"
   # additionalJavaOpts: "-XX:MaxRAM=512m"
   persistence:
     enabled: true
     accessMode: ReadWriteOnce
     name: data
-    size: "4Gi"
+    size: "2Gi"
     # storageClass: "ssd"
   readinessProbe:
     httpGet:
@@ -225,14 +225,14 @@ master:
 data:
   name: data
   exposeHttp: false
-  replicas: 2
+  replicas: 1   #2
   heapSize: "1536m"
   # additionalJavaOpts: "-XX:MaxRAM=1536m"
   persistence:
     enabled: true
     accessMode: ReadWriteOnce
     name: data
-    size: "15Gi"
+    size: "8Gi"   #35Gi
     # storageClass: "ssd"
   readinessProbe:
     httpGet:
