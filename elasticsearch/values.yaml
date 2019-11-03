@@ -165,8 +165,8 @@ client:
       - test-elasticsearch.fuchicorp.com
     tls: 
       - secretName: elasticsearch-tls
-         hosts:
-           - test-elasticsearch.fuchicorp.com
+        hosts:
+          - test-elasticsearch.fuchicorp.com
 
 master:
   name: master
