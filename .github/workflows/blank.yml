@@ -1,0 +1,21 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Downloading  the helm binary script 
+      run: |
+        ## Downloading and putting home directory
+        sudo curl https://get.helm.sh/helm-v2.11.0-linux-amd64.tar.gz -o ~/helm.gz
+        
+        ## untaring the helm command 
+        tar -zxvf ~/helm.gz && sudp cp -rf ~/linux-amd64/helm /usr/local/bin/
+        
+        ## Making sure that helm command is working       
+        helm version --client
