@@ -12,7 +12,7 @@ image:
 
 nfs:
   server: freenas.varu.local
-  path: /mnt/Storage/Kube-data
+  path: 
   mountOptions:
 
 # For creating the StorageClass automatically:
