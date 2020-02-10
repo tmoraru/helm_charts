@@ -39,7 +39,7 @@ alertmanager:
   ##
   image:
     repository: prom/alertmanager
-    tag: v0.20.0
+    tag: 
     pullPolicy: IfNotPresent
 
   ## alertmanager priorityClassName
@@ -92,12 +92,12 @@ alertmanager:
   ingress:
     ## If true, alertmanager Ingress will be created
     ##
-    enabled: true
+    enabled: 
 
     ## alertmanager Ingress annotations
     ##
     annotations: 
-      kubernetes.io/ingress.class: nginx
+      kubernetes.io/ingress.class: 
     #   kubernetes.io/tls-acme: 'true'
 
     ## alertmanager Ingress additional labels
@@ -108,7 +108,7 @@ alertmanager:
     ## Must be provided if Ingress is enabled
     ##
     hosts: 
-      - alertmanager.varu.local
+      - 
     #   - domain.com/alertmanager
 
     ## Extra paths to prepend to every host configuration. This is useful when working with annotation based services.
@@ -172,12 +172,12 @@ alertmanager:
     ## Ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
     ##
     accessModes:
-      - ReadWriteMany
+      - 
 
     ## alertmanager data Persistent Volume Claim annotations
     ##
     annotations: 
-      volume.beta.kubernetes.io/storage-class: "nfs-client"
+      volume.beta.kubernetes.io/storage-class: ""
 
     ## alertmanager data Persistent Volume existing claim name
     ## Requires alertmanager.persistentVolume.enabled: true
@@ -190,7 +190,7 @@ alertmanager:
 
     ## alertmanager data Persistent Volume size
     ##
-    size: 2Gi
+    size: 
 
     ## alertmanager data Persistent Volume Storage Class
     ## If defined, storageClassName: <storageClass>
@@ -718,7 +718,7 @@ server:
     ## Must be provided if Ingress is enabled
     ##
     hosts: 
-      - prometheus.varu.local
+      - 
     #   - domain.com/prometheus
 
     ## Extra paths to prepend to every host configuration. This is useful when working with annotation based services.
@@ -781,12 +781,12 @@ server:
     ## Ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
     ##
     accessModes:
-      - ReadWriteMany
+      - 
 
     ## Prometheus server data Persistent Volume annotations
     ##
     annotations: 
-      volume.beta.kubernetes.io/storage-class: "nfs-client"
+      volume.beta.kubernetes.io/storage-class: ""
 
     ## Prometheus server data Persistent Volume existing claim name
     ## Requires server.persistentVolume.enabled: true
@@ -1097,12 +1097,12 @@ pushgateway:
     ## Ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
     ##
     accessModes:
-      - ReadWriteMany
+      - 
 
     ## pushgateway data Persistent Volume Claim annotations
     ##
     annotations: 
-      volume.beta.kubernetes.io/storage-class: "nfs-client"
+      volume.beta.kubernetes.io/storage-class: ""
 
     ## pushgateway data Persistent Volume existing claim name
     ## Requires pushgateway.persistentVolume.enabled: true
@@ -1115,7 +1115,7 @@ pushgateway:
 
     ## pushgateway data Persistent Volume size
     ##
-    size: 2Gi
+    size: 
 
     ## pushgateway data Persistent Volume Storage Class
     ## If defined, storageClassName: <storageClass>

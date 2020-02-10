@@ -18,12 +18,7 @@ existingConfigMap: metallb
 # Refer to https://metallb.universe.tf/configuration/ for
 # available options.
 configInline: 
-  config: |
-    address-pools:
-    - name: my-ip-space
-      protocol: layer2
-      addresses:
-      - 10.10.45.240-10.10.45.248
+  config: 
 rbac:
   # create specifies whether to install and use RBAC rules.
   create: true
