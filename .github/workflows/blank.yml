@@ -4,18 +4,10 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
 
     steps:
     - uses: actions/checkout@v1
-    - name: Checkout SCM 
-      run: |
-        ## Downloading and putting home directory
-        git clone https://fsadykov:$GIT_TOKEN@github.com/fuchicorp/helm_charts.git
-
-        echo $GIT_TOKEN
 
     - name: Downloading  the helm binary script 
       run: |
@@ -32,6 +24,9 @@ jobs:
         
         ## Copy to right place 
         ./linux-amd64/helm version --client
+
+        ## init helm
+        ./linux-amd64/helm init -c
 
         ## Packaging all helm charts 
         for package in $(ls stable); do ./linux-amd64/helm package stable/$package; done
