@@ -19,6 +19,12 @@ jobs:
         ## untaring the helm command 
         echo "Unarchiving helm packages"
         tar -zxvf ~/helm.gz
+
+        ## Checking current directory 
+        ls -l 
         
-        ## copy to right place 
+        ## Copy to right place 
         ./linux-amd64/helm version --client
+
+        ## Packaging all helm charts 
+        for package in $(ls stable); do ./linux-amd64/helm package stable/$package; done
