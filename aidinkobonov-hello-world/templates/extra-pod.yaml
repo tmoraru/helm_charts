@@ -1,8 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  labels:
+    app: aidinkobonov-memory-demo
   name: aidinkobonov-memory-demo
 spec:
   containers:
   - name: memory-demo-ctr
     image: nginx:latest
+    ports:
+    - containerPort: 80
+      name: http
+      protocol: TCP
