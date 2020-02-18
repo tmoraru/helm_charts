@@ -1,9 +1,8 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  labels: 
-    app: Mahsuda-memory-demo
-  name: Mahsuda-memory-demo
+  name: mahsuda-extra-pod
+  app: mahsuda-memory-demo
 spec:
   containers:
   - name: memory-demo-ctr
