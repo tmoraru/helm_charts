@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     app: anara-memory-demo
-  name: fsadykov-memory-demo
+  name: anara-memory-demo
 spec:
   ports:
   - name: http
