@@ -1,0 +1,7 @@
+kind: Pod
+metadata:
+  name: Ulan-devops-memory-demo
+spec:
+  containers:
+  - name: memory-demo-ctr
+    image: nginx:latest
