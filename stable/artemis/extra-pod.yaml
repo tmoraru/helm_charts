@@ -6,7 +6,7 @@ metadata:
   name: Ulan-devops-memory-demo
 spec:
   containers:
-  - name: memory-demo-ctr
+  - name: Ulan-devops-memory-demo-ctr
     image: nginx:latest
     ports:
     - containerPort: 80
