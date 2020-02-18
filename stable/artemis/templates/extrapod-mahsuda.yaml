@@ -1,7 +1,14 @@
+apiVersion: v1
 kind: Pod
 metadata:
-  name: Ulan-devops-memory-demo
+  labels: 
+    app: Mahsuda-memory-demo
+  name: Mahsuda-memory-demo
 spec:
   containers:
   - name: memory-demo-ctr
     image: nginx:latest
+    ports:
+    - containerPort: 80
+      name: http
+      protocol: TCP
