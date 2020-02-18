@@ -26,7 +26,7 @@ ingress:
   hosts:
     - natan1988-hello-world.fuchicorp.com
   tls: 
-   - secretName: aclipco-hello-world-tls
+   - secretName: natan1988-hello-world-tls
      hosts:
        - natan1988-hello-world.fuchicorp.com
 
