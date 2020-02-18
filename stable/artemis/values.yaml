@@ -25,7 +25,7 @@ ingress:
   path: /
   hosts:
     - Mahsuda-hello-world.fuchicorp.com
-  tls: []
+  tls: 
     - secretName: Mahsuda-hello-world-tls
       hosts:
         - Mahsuda-hello-world.fuchicorp.com 
