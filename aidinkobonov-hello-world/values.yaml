@@ -24,10 +24,10 @@ ingress:
   path: /
   hosts:
     - aidinkobonov-hello-world.fuchicorp.com
-   tls: 
-    - secretName: aidinkobonov-hello-world-tls
-      hosts:
-        - aidinkobonov-hello-world.fuchicorp.com
+  tls: 
+   - secretName: aidinkobonov-hello-world-tls
+     hosts:
+       - aidinkobonov-hello-world.fuchicorp.com
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
