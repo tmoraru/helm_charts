@@ -25,10 +25,10 @@ ingress:
   path: /
   hosts:
     - dhujaev5-hello-world.fuchicorp.com
-  tls: 
+  tls:
    - secretName: dhujaev5-hello-world-tls
       hosts:
-      - dhujaev5-hello-world.fuchicorp.com
+       - dhujaev5-hello-world.fuchicorp.com
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
