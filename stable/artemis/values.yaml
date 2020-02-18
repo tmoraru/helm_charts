@@ -23,9 +23,11 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - chart-example.local
+    - Mahsuda-hello-world.fuchicorp.com
   tls: []
-  #  - secretName: chart-example-tls
+    - secretName: Mahsuda-hello-world-tls
+      hosts:
+        - Mahsuda-hello-world.fuchicorp.com 
   #    hosts:
   #      - chart-example.local
 
