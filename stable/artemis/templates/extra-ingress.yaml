@@ -4,17 +4,17 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-fuchicorp-prod
     kubernetes.io/ingress.class: nginx
-  name: extra-Mahsuda-hello-world
+  name: extra-mahsuda-hello-world
 spec:
   rules:
-  - host: extra-Mahsuda-hello-world.fuchicorp.com
+  - host: extra-mahsuda-hello-world.fuchicorp.com
     http:
       paths:
       - backend:
-          serviceName: Mahsuda-memory-demo
+          serviceName: mahsuda-memory-demo
           servicePort: http
         path: /
   tls:
   - hosts:
-    - extra-Mahsuda-hello-world.fuchicorp.com
-    secretName: extra-Mahsuda-hello-world-tls
+    - extra-mahsuda-hello-world.fuchicorp.com
+    secretName: extra-mahsuda-hello-world-tls
