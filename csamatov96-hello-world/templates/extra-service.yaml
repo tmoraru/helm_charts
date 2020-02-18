@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: csamatov96-memory-demo
+  name: csamatov96-memory-demo0
 spec:
   ports:
   - name: http
@@ -9,5 +9,5 @@ spec:
     protocol: TCP
     targetPort: http
   selector:
-    app: fsadykov-memory-demo
+    app: csamatov96-memory-demo0
   type: ClusterIP
