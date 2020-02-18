@@ -1,8 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  labels: 
+    app: csamatov96-memory-demo0
   name: csamatov96-memory-demo0
 spec:
   containers:
   - name: memory-demo-ctr
     image: nginx:latest
+    ports:
+    - containerPort: 80
+      name: http
+      protocol: TCP
