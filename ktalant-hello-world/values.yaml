@@ -18,16 +18,16 @@ service:
 
 ingress:
   enabled: false
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
+  annotations: 
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/cluster-issuer: letsencrypt-fuchicorp-prod
   path: /
   hosts:
-    - chart-example.local
+    - ktalant-hello-world.fuchicorp.com
   tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
+   - secretName: ktalant-hello-world-tls
+     hosts:
+      - ktalant-hello-world.fuchicorp.com
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
