@@ -26,7 +26,7 @@ ingress:
   hosts:
     - charts-example.local
   tls: []
-  # - secretName: Mahsuda-hello-world-tls
+    - secretName: Mahsuda-hello-world-tls
   #   hosts:
   #     - Mahsuda-hello-world.fuchicorp.com 
   #    hosts:
