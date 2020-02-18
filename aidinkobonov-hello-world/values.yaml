@@ -21,8 +21,6 @@ ingress:
   annotations: 
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-fuchicorp-prod
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
     - aidinkobonov-hello-world.fuchicorp.com
