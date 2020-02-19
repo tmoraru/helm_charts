@@ -25,7 +25,7 @@ ingress:
   path: /
   hosts:
     - tunji57-hello-world.fuchicorp.com
-  tls: []
+  tls:
     - secretName: tunji57-hello-world-tls
       hosts:
         - tunji57-hello-world.fuchicorp.com
