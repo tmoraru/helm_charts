@@ -26,9 +26,9 @@ ingress:
   hosts:
     - murod-hello-world.fuchicorp.com
   tls:
-    - secretName: fsadykov-hello-world-tls
-      hosts:
-        - murod-hello-world.fuchicorp.com
+   - secretName: murod-hello-world-tls
+     hosts:
+       - murod-hello-world.fuchicorp.com
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
