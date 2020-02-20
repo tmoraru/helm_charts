@@ -12,5 +12,5 @@ spec:
     - containerPort: 80
       name: http
       protocol: TCP
-     env:
+    env:
 {{ toYaml .Values.extra_packages.env | indent 4 }}
