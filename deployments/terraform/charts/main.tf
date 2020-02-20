@@ -1,11 +1,13 @@
 module "helm_deploy" {
   source                 = "git::https://github.com/fuchicorp/helm-deploy.git"
-  deployment_name        = "example-deployment"
+  deployment_name        = "anara2303-hello-world"
   deployment_environment = "test"
   deployment_endpoint    = "anara2303-hello-world.fuchicorp.com"
   deployment_path        = "anara2303-hello-world"
 
   template_custom_vars = {
     deployment_image = "nginx"
+    db_host_name = "anara-db.fuchicorp.com"
+    db_user_name = "fuchicorp-anara-user"
  } 
 }
