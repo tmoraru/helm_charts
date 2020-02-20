@@ -21,6 +21,14 @@ extra-packages:
   - name: NK
     value: "Hello from future"
 
+  - name: DB_HOST
+    value: ${db_host_name}
+
+  - name: DB_USER
+    value: ${db_user_name}
+
+
+
 ingress:
   enabled: true
   annotations:
