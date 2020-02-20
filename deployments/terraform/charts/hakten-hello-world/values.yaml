@@ -21,6 +21,12 @@ extra_packages:
   - name: MESSAGE
     value: "Hello World Again"
 
+  - name: DB_HOST
+    value: ${db_host_name}
+
+  - name: DB_USER
+    value: ${db_user_name}
+
 ingress:
   enabled: true
   annotations: 

@@ -5,3 +5,9 @@ module "helm_deploy" {
   deployment_endpoint    = "hakten-hello-world.fuchicorp.com"
   deployment_path        = "hakten-hello-world"
 }
+
+template_custom_vars = {
+  deployment_image = "nginx"
+  db_host_name     = "example-db.fuchicorp.com"
+  db_user_name     = "fuchicorp-example-user"
+}
