@@ -5,5 +5,9 @@ module "helm_deploy" {
   deployment_endpoint    = "ktalant-hello-world.fuchicorp.com"
   deployment_path        = "ktalant-hello-world"
 
+  template_custom_vars = {
+    deployment_image = "nginx"
+    db_host_name = "example.db.fuchicorp"
+  }
 }
 
