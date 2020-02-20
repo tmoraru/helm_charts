@@ -23,7 +23,7 @@ extra-packages:
 
 ingress:
   enabled: false #########
-  annotations: {}
+  annotations: 
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-fuchicorp-prod ####
 
