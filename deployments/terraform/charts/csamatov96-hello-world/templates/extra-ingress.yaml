@@ -17,4 +17,4 @@ spec:
   tls:
   - hosts:
     - extra-csamatov96-hello-world.fuchicorp.com #############
-    secretName: csamatov96-hello-world-tls ####################
+    secretName: extra-csamatov96-hello-world-tls ####################
