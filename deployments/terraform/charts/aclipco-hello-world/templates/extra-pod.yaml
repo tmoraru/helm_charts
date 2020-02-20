@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  labels: 
-    app: aclipco-memory-demo
+  labels:
+  app: aclipco-memory-demo
   name: aclipco-memory-demo
 spec:
-  containers:
+ containers:
   - name: memory-demo-ctr
     image: nginx:latest
     ports:
