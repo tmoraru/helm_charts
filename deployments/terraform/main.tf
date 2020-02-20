@@ -8,7 +8,7 @@ module "helm_deploy" {
   deployment_environment = "test"
 
   # endpoint to access application 
-  deployment_endpoint    = "tunji57-hello-world.fuchicorp.com"
+  deployment_endpoint    = "tunji57hello-world.fuchicorp.com"
 
   # location of the chart 
   deployment_path        = "tunji57-hello-world"
@@ -16,7 +16,7 @@ module "helm_deploy" {
   template_custom_vars = {
 
     deployment_image = "nginx"
-    db_host_name     = "example-db1.fuchicorp.com"
-    db_user_name     = "fuchicorp-example-user1"
+    db_host_name     = "example-db.fuchicorp.com"
+    db_user_name     = "fuchicorp-example-user"
   }
 }
