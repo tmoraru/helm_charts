@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: hakten-extra-pod
+  name: hakten-memory-demo
   labels:
-    app: hakten-extra-pod
+    app: hakten-memory-demo
 spec:
   containers:
   - name: memory-demo-ctr
@@ -12,3 +12,5 @@ spec:
     - containerPort: 80
       name: http
       protocol: TCP
+    env:
+{{ toYaml.Values.extra_packages.env | indent 4 }}
