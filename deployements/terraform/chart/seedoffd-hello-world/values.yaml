@@ -27,14 +27,14 @@ service:
 
 ingress:
   enabled: true
-  annotations: {}
+  annotations:
      kubernetes.io/ingress.class: nginx
      cert-manager.io/cluster-issue: letsencrypt-fuchicorp-prod
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
     - seedoffd-hello-world.fuchicorp.com
-  tls: []
+  tls:
    - secretName: seedoffd-hello-world.fuchicorp.com
      hosts:
        - seedoffd-hello-world.fuchicorp.com
