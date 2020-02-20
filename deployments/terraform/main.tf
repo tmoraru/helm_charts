@@ -7,7 +7,8 @@ module "helm_deploy" {
 
   template_custom_vars = {
     deployment_image = "nginx"
-    db_host_name = "example.db.fuchicorp"
+    db_host = "talantdb.talantzon.com"
+    db_user = "dbuser1"
   }
 }
 

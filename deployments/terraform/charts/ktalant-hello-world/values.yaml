@@ -22,7 +22,10 @@ extra_packages:
     value: "Hello World"
 
   - name: DB_HOST
-    value: ${db_host_name}
+    value: ${db_host}
+
+  - name: DB_USER
+    value: ${db_user}
 
 ingress:
   enabled: true
