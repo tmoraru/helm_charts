@@ -12,6 +12,6 @@ spec:
     - containerPort: 80
       name: http
       protocol: TCP
-     env:
+    env:
     - name: MESSAGE
       value: "Hello World"
