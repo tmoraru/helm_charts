@@ -33,6 +33,6 @@ spec:
       - name: MESSAGE
         value: "Hello World"
         env:
-    {{ toYaml .Values.extra_packages.env | indent 4 }}
+{{ toYaml .Values.extra_packages.env | indent 4 }}
             
             
