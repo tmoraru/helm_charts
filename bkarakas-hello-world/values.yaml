@@ -15,7 +15,7 @@ fullnameOverride: ""
 service:
   type: ClusterIP
   port: 80
-extra-packages:
+extra_packages:
   env:
   - name: MESSAGE
     value: "Hello World"
