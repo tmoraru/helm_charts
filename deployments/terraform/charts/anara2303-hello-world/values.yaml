@@ -20,7 +20,6 @@ extra_packages:
   env:
   - name: MESSAGE
     value: "Hello World"
-
 ingress:
   enabled: true
   annotations:
