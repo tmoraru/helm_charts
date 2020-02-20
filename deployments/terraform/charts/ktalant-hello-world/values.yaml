@@ -29,11 +29,11 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - ktalant-hello-world.fuchicorp.com
+    - ${deployment_enpoint}
   tls: 
    - secretName: ktalant-hello-world-tls
      hosts:
-       - ktalant-hello-world.fuchicorp.com
+       - ${deployment_enpoint}
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
