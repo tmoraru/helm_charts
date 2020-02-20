@@ -16,5 +16,5 @@ spec:
 #    - name: MESSAGE
 #      value: "Hello world"
 #    env: 
-#{{ toYaml .Values.resources | indent 2 }} 
+{{ toYaml .Values.resources | indent 2 }} 
 
