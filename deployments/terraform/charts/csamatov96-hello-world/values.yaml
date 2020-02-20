@@ -30,7 +30,7 @@ ingress:
   path: /
   hosts: #DNS record 
     - ${deployment_endpoint}
-  tls: []
+  tls: 
    - secretName: csamatov-hello-world.tls #for https connection
      hosts:
        - ${deployment_endpoint}
