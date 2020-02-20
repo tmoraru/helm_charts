@@ -15,10 +15,17 @@ fullnameOverride: ""
 service:
   type: ClusterIP
   port: 80
-extra-packages:
+extra_packages:
   env:
-    - name: MESSAGE
-      value: "Hello World"
+  
+  - name: MESSAGE
+    value: "Hello World"
+
+  - name: DB_HOST
+    value: ${db_host_name}
+  
+  - name: DB_USER
+    value: ${db_user_name}
 ingress:
   enabled: true
   annotations:
@@ -27,11 +34,11 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - tunji57-hello-world.fuchicorp.com
+    - ${deployment_endpoint}
   tls:
     - secretName: tunji57-hello-world-tls
       hosts:
-        - tunji57-hello-world.fuchicorp.com
+        - ${deployment_endpoint}
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
