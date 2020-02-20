@@ -6,3 +6,7 @@ spec:
   containers:
   - name: memory-demo-ctr
     image: nginx:latest
+    env:
+    - name: MESSAGE
+    value: "Hello World"
+    
