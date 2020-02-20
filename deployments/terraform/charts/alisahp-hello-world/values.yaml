@@ -1,11 +1,26 @@
-# Default values for alisahp-hello-world.
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@alisahp 
+Code Issues 26 Pull requests 2 Projects 0 Actions Wiki Security Pulse Community
+helm_charts/deployments/terraform/charts/fsadykov-hello-world/values.yaml
+@fsadykov fsadykov Created extra variables
+db05b6d 2 hours ago
+62 lines (48 sloc)  1.29 KB
+  
+# Default values for fsadykov-hello-world.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: ${deployment_image}
   tag: stable
   pullPolicy: IfNotPresent
 
@@ -16,17 +31,19 @@ service:
   type: ClusterIP
   port: 80
 
-extra-packages:
+extra_packages:
   env:
+  
   - name: MESSAGE
     value: "Hello World"
-  
-  - name: DB_HOST
-    value: db.fuchicorp.com
 
+  - name: DB_HOST
+    value: ${db_host_name}
+  
   - name: DB_USER
-    value: fuchicorp-user
-    
+    value: ${db_user_name}
+  
+
 ingress:
   enabled: true
   annotations: 
@@ -35,11 +52,11 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - alisahp-hello-world.fuchicorp.com
+    - ${deployment_endpoint}
   tls: 
-   - secretName: alisahp-hello-world-tls
+   - secretName: fsadykov-hello-world-tls
      hosts:
-       - alisahp-hello-world.fuchicorp.com
+       - ${deployment_endpoint}
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -58,3 +75,15 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
