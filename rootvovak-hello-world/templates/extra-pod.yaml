@@ -12,3 +12,6 @@ spec:
     - containerPort: 80
       name: http
       protocol: TCP
+    env:
+    - name: NK
+      value: "Hello from future"
