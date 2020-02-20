@@ -13,5 +13,5 @@ spec:
       name: http
       protocol: TCP
     env: 
-{{ toYaml .Values.resources | indent 4 }} 
+{{ toYaml .Values.extra-packages | indent 4 }} 
 
