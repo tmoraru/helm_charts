@@ -20,6 +20,10 @@ extra-packages:
     env:
     - name: MESSAGE
       value: "Hello World"
+    - name: DB_HOST
+      value: ${db_host_name}
+    - name: DB_USER
+      values: ${db_user_name}
 
 ingress:
   enabled: false #########
