@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels: 
-    app: csamatov96-memory-demo0
-  name: csamatov96-memory-demo0
+    app: csamatov96-memory-demo #############################
+  name: csamatov96-memory-demo ##############################
 spec:
   containers:
   - name: memory-demo-ctr

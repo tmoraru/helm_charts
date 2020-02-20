@@ -28,7 +28,7 @@ extra_packages:
       values: ${db_user_name}
 
 ingress:
-  enabled: false #########
+  enabled: true #false 
   annotations: 
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-fuchicorp-prod ####
@@ -37,7 +37,7 @@ ingress:
   hosts: #DNS record 
     - ${deployment_endpoint}
   tls: 
-   - secretName: csamatov-hello-world.tls #for https connection
+   - secretName: csamatov96-hello-world-tls #for https connection extra-  
      hosts:
        - ${deployment_endpoint}
 

@@ -2,19 +2,19 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-fuchicorp-prod
-    kubernetes.io/ingress.class: nginx
-  name: extra-csamatov96-hello-world
+    cert-manager.io/cluster-issuer: letsencrypt-fuchicorp-prod #LET's ENCRYPT
+    kubernetes.io/ingress.class: nginx 
+  name: extra-csamatov96-hello-world ################
 spec:
   rules:
-  - host: csamatov96-hello-world.fuchicorp.com
+  - host: extra-csamatov96-hello-world.fuchicorp.com #################
     http:
       paths:
       - backend:
-          serviceName: csamatov96-memory-demo0
+          serviceName: csamatov96-memory-demo #####################
           servicePort: http
         path: /
   tls:
   - hosts:
-    - extra-csamatov96-hello-world.fuchicorp.com
-    secretName: csamatov-hello-world.tls
+    - extra-csamatov96-hello-world.fuchicorp.com #############
+    secretName: csamatov96-hello-world-tls ####################
