@@ -23,14 +23,14 @@ extra-packages:
 
 ingress:
   enabled: true
-  annotations: 
+  annotations:
      kubernetes.io/ingress.class: nginx
      cert-manager.io/cluster-issuer: letsencrypt-fuchicorp-prod
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - aclipco-hello-world.fuchicorp.com
-  tls: 
+    - ${deployment_endpoint}
+  tls:
    - secretName: aclipco-hello-world-tls
      hosts:
        - aclipco-hello-world.fuchicorp.com
