@@ -16,6 +16,11 @@ service:
   type: ClusterIP
   port: 80
 
+extra-packages:
+  env:
+  - name: NK
+    value: "Hello from future"
+
 ingress:
   enabled: true
   annotations:
@@ -24,11 +29,11 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - rootvovak-hello-world.fuchicorp.com
+    - ${deployment_endpoint}
   tls:
    - secretName: rootvovak-hello-world-tls
      hosts:
-       - rootvovak-hello-world.fuchicorp.com
+       - ${deployment_endpoint}
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
