@@ -12,3 +12,23 @@ spec:
     - containerPort: 80
       name: http
       protocol: TCP
+      apiVersion: v1
+kind: Pod
+metadata:
+  labels: 
+    app: seedoffd-memory-demo
+  name: seedoffd-memory-demo
+spec:
+  containers:
+  - name: memory-demo-ctr
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+      name: http
+      protocol: TCP
+    env:
+    - name: DEMO_GREETING
+      value: "Hello from the environment"
+      env:
+      - name: MESSAGE
+        value: "Hello World"
