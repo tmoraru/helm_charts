@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: ${deployment_image}
   tag: stable
   pullPolicy: IfNotPresent
 
@@ -33,7 +33,7 @@ ingress:
   tls:
    - secretName: aclipco-hello-world-tls
      hosts:
-       - aclipco-hello-world.fuchicorp.com
+       - ${deployment_endpoint}
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

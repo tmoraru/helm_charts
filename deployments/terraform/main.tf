@@ -4,7 +4,8 @@ module "helm_deploy" {
   deployment_environment = "test"
   deployment_endpoint    = "aclipco-hello-world.fuchicorp.com"
   deployment_path        = "aclipco-hello-world"
-    template_custom_vars = {
+    
+  template_custom_vars = {
     deployment_image = "nginx"
- }
+  }
 }
