@@ -17,9 +17,9 @@ service:
   port: 80
 
 extra-packages:
-  env:
-  - name: MESSAGE
-    value: "Hello World"
+    env:
+    - name: MESSAGE
+      value: "Hello World"
 
 ingress:
   enabled: false #########
