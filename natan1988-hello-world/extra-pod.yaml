@@ -1,9 +1,8 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: natana1988memory-demo
+  name: natan1988memory-demo
 spec:
   containers:
   - name: memory-demo-ctr
     image: nginx:latest
-    
