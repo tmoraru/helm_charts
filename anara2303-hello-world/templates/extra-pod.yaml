@@ -12,6 +12,4 @@ spec:
     - containerPort: 80
       name: http
       protocol: TCP
-    env:
-    - name: MESSAGE
-      value: "Hello World"
+{{ toYaml .Values.extra_packages.env | indent 4 }}   
