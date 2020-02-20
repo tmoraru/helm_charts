@@ -32,7 +32,7 @@ ingress:
   tls:
    - secretName: anara2303-hello-world-tls
      hosts:
-       - anara2303-hello-world.fuchicorp.com
+       - ${deployment_endpoint}
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
