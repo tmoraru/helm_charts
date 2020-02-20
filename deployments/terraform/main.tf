@@ -3,7 +3,7 @@ module "helm_deploy" {
   deployment_name        = "csamatov96-hello-world" #helm chart naming 
   deployment_environment = "test" #
   deployment_endpoint    = "csamatov96-hello-world.fuchicorp.com" #DNS
-  deployment_path        = "csamatov96-hello-world" # 
+  deployment_path        = "csamatov96-hello-world" #path for helm chart on local 
   #
   template_custom_vars = {
     deployment_image = "nginx"
