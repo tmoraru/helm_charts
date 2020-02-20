@@ -14,4 +14,4 @@ spec:
       protocol: TCP
     env:
     - name: MESSAGE
-      value: "Hello World"
+      value: Hello World
