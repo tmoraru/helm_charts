@@ -19,7 +19,7 @@ service:
   extra-packages:
   env:
   - name: MESSAGE
-    value: "Hello World"
+    values: "Hello World"
 
 ingress:
   enabled: true
