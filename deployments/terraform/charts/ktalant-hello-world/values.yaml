@@ -32,7 +32,7 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - ${deployment_enpoint}
+    - ${deployment_endpoint}
   tls: 
    - secretName: ktalant-hello-world-tls
      hosts:
