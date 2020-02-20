@@ -17,4 +17,4 @@ spec:
   tls:
   - hosts:
     - extra-murod-hello-world.fuchicorp.com
-    secretName: extra-fsadykov-hello-world-tls
+    secretName: extra-murod-hello-world-tls

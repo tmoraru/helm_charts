@@ -16,11 +16,16 @@ service:
   type: ClusterIP
   port: 80
 
+extra-packages:
+  env:
+  - name: MESSAGE
+    value: "Hello World"
+
 ingress:
   enabled: true
   annotations: 
-     kubernetes.io/ingress.class: nginx
-     cert-manager.io/cluster-issuer: letsencrypt-fuchicorp-prod
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-fuchicorp-prod
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
