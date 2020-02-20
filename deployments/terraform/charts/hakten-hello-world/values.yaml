@@ -22,10 +22,10 @@ extra_packages:
     value: "Hello World"
 
   - name: DB_HOST
-    value: "db_host_name"
+    value: "db.fuchicorp.com"
   
   - name: DB_USER
-    value: "db_user_name"
+    value: "fuchicorp-user"
 
 ingress:
   enabled: true

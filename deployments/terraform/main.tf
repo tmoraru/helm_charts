@@ -1,6 +1,6 @@
 module "helm_deploy" {
   source                 = "git::https://github.com/fuchicorp/helm-deploy.git"
-  deployment_name        = "hakten-hello-world"
+  deployment_name        = "hakten-hello-world-terraform"
   deployment_environment = "test"
   deployment_endpoint    = "hakten-hello-world.fuchicorp.com"
   deployment_path        = "hakten-hello-world"
