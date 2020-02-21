@@ -4,17 +4,17 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-fuchicorp-prod
     kubernetes.io/ingress.class: nginx
-  name: extra-fsadykov-hello-world
+  name: extra-enver0173-hello-world
 spec:
   rules:
-  - host: extra-fsadykov-hello-world.fuchicorp.com
+  - host: extra-enver0173-hello-world.fuchicorp.com
     http:
       paths:
       - backend:
-          serviceName: fsadykov-memory-demo
+          serviceName: enver0173-memory-demo
           servicePort: http
         path: /
   tls:
   - hosts:
-    - extra-fsadykov-hello-world.fuchicorp.com
-    secretName: extra-fsadykov-hello-world-tls
+    - extra-enver0173-hello-world.fuchicorp.com
+    secretName: extra-enver0173-hello-world-tls

@@ -1,11 +1,11 @@
-# Default values for fsadykov-hello-world.
+# Default values for enver0173-hello-world.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: ${deployment_image}
+  repository: nginx
   tag: stable
   pullPolicy: IfNotPresent
 
@@ -23,10 +23,10 @@ extra_packages:
     value: "Hello World"
 
   - name: DB_HOST
-    value: ${db_host_name}
+    value: db.fuchicorp.com
   
   - name: DB_USER
-    value: ${db_user_name}
+    value: fuchicorp-user
   
 
 ingress:
@@ -37,11 +37,11 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - ${deployment_endpoint}
+    - enver0173-hello-world.fuchicorp.com
   tls: 
-   - secretName: fsadykov-hello-world-tls
+   - secretName: enver0173-hello-world-tls
      hosts:
-       - ${deployment_endpoint}
+       - enver0173-hello-world.fuchicorp.com
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

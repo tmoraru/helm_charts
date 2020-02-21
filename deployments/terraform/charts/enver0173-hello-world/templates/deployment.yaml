@@ -1,22 +1,22 @@
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: {{ include "fsadykov-hello-world.fullname" . }}
+  name: {{ include "enver0173-hello-world.fullname" . }}
   labels:
-    app.kubernetes.io/name: {{ include "fsadykov-hello-world.name" . }}
-    helm.sh/chart: {{ include "fsadykov-hello-world.chart" . }}
+    app.kubernetes.io/name: {{ include "enver0173-hello-world.name" . }}
+    helm.sh/chart: {{ include "enver0173-hello-world.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ include "fsadykov-hello-world.name" . }}
+      app.kubernetes.io/name: {{ include "enver0173-hello-world.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: {{ include "fsadykov-hello-world.name" . }}
+        app.kubernetes.io/name: {{ include "enver0173-hello-world.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
       containers:

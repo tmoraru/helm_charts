@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels: 
-    app: fsadykov-memory-demo
-  name: fsadykov-memory-demo
+    app: enver0173-memory-demo
+  name: enver0173-memory-demo
 spec:
   containers:
   - name: memory-demo-ctr
