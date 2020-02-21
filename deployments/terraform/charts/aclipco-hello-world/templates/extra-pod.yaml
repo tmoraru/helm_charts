@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   labels:
     app: aclipco-memory-demo
-    name: aclipco-memory-demo
+  name: aclipco-memory-demo
 spec:
  containers:
   - name: memory-demo-ctr
