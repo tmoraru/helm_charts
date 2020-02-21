@@ -8,7 +8,7 @@ spec:
   containers:
   - name: memory-demo-ctr
     image: nginx:latest
-    ports:
+    port:
     - containerPort: 80
       name: http
       port: 80
