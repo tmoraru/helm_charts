@@ -18,6 +18,7 @@ service:
 
 extra_packages:
   env:
+  
   - name: MESSAGE
     value: "Hello World"
 
