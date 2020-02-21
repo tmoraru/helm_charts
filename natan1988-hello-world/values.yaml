@@ -15,7 +15,10 @@ fullnameOverride: ""
 service:
   type: ClusterIP
   port: 80
-
+extra_packages:
+  env:
+  - name: MESSAGE
+    value: "Hello World"
 ingress:
   enabled: true
   annotations: 
