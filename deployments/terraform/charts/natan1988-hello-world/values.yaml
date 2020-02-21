@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: ${deployment_image}
   tag: stable
   pullPolicy: IfNotPresent
 
@@ -19,6 +19,10 @@ extra_packages:
   env:
   - name: MESSAGE
     value: "Hello World"
+  - name: DB_HOST
+    value: ${db_host_name}
+  - name: DB_USER
+    value: ${db_user_name}   
 ingress:
   enabled: true
   annotations: 
