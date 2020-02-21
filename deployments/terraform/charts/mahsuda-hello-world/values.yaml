@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: ${deployment_image}
   tag: stable
   pullPolicy: IfNotPresent
 
@@ -16,10 +16,18 @@ service:
   type: ClusterIP
   port: 80
 
-  extra-packages:
+extra_packages:
   env:
+  
   - name: MESSAGE
-    values: "Hello World"
+    value: "Hello World"
+
+  - name: DB_HOST
+    value: ${db_host_name}
+  
+  - name: DB_USER
+    value: ${db_user_name}
+  
 
 ingress:
   enabled: true
@@ -29,11 +37,11 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - mahsuda-hello-world.fuchicorp.com
-  tls:
-   - secretName: mahsuda-hello-world
+    - ${deployment_endpoint}
+  tls: 
+   - secretName: mahsuda-hello-world-tls
      hosts:
-       - mahsuda-hello-world.fuchicorp.com
+       - ${deployment_endpoint}
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

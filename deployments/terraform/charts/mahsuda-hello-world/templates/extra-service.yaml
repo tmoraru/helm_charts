@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mahsuda-hello-world
+  name: mahsuda-memory-demo
 spec:
   ports:
   - name: http
@@ -9,5 +9,5 @@ spec:
     protocol: TCP
     targetPort: http
   selector:
-    app: mahsuda-hello-world
+    app: mahsuda-memory-demo
   type: ClusterIP
