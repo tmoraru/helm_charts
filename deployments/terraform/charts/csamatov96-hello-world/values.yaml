@@ -22,7 +22,7 @@ extra_packages: #
     - name: DB_HOST
       value: ${db_host_name}
     - name: DB_USER
-      values: ${db_user_name}
+      value: ${db_user_name} #################VALUES -> value !!!!!!!!!!!!!!!!!!!!
 ingress:
   enabled: true #false 
   annotations: 
