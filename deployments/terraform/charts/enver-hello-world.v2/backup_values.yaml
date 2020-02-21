@@ -1,4 +1,4 @@
-# Default values for enver-hello-world.v2.
+# Default values for enver0173-hello-world.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -37,11 +37,11 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - enver-hello-world.v2.fuchicorp.com
+    - enver0173-hello-world.fuchicorp.com
   tls: 
-   - secretName: enver-hello-world.v2-tls
+   - secretName: enver0173-hello-world-tls
      hosts:
-       - enver-hello-world.v2.fuchicorp.com
+       - enver0173-hello-world.fuchicorp.com
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
