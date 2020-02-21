@@ -4,10 +4,10 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-fuchicorp-prod
     kubernetes.io/ingress.class: nginx
-  name: extra-enver0173-hello-world
+  name: extra-enver-hello-world.v2
 spec:
   rules:
-  - host: extra-enver0173-hello-world.fuchicorp.com
+  - host: extra-enver-hello-world.v2.fuchicorp.com
     http:
       paths:
       - backend:
@@ -16,5 +16,5 @@ spec:
         path: /
   tls:
   - hosts:
-    - extra-enver0173-hello-world.fuchicorp.com
-    secretName: extra-enver0173-hello-world-tls
+    - extra-enver-hello-world.v2.fuchicorp.com
+    secretName: extra-enver-hello-world.v2-tls
