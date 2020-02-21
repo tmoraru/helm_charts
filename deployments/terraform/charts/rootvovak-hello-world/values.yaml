@@ -16,30 +16,29 @@ service:
   type: ClusterIP
   port: 80
 
-extra-packages:
+extra_packages:
   env:
   
-  - name: NK
-    value: "Hello from future"
+  - name: MESSAGE
+    value: "Hello World"
 
   - name: DB_HOST
     value: ${db_host_name}
-
+  
   - name: DB_USER
     value: ${db_user_name}
-
-
+  
 
 ingress:
   enabled: true
-  annotations:
+  annotations: 
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-fuchicorp-prod
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
     - ${deployment_endpoint}
-  tls:
+  tls: 
    - secretName: rootvovak-hello-world-tls
      hosts:
        - ${deployment_endpoint}
