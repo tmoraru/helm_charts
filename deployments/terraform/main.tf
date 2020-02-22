@@ -8,7 +8,7 @@ module "helm_deploy" {
   # endpoint to access application
   deployment_endpoint    = "${lookup(var.deployment_endpoint, "${var.deployment_environment}")}"
   # location of the chart
-  deployment_path        = "Ulan-devops-hello-world"
+  deployment_path        = "ulan-devops-hello-world"
   template_custom_vars = {
     deployment_image = "nginx"
   }
