@@ -11,8 +11,8 @@ variable "deployment_environment" {
 variable "deployment_endpoint" {
   type = "map"
   default  = {
-    dev = "dev.fsadykov-hello-world.fuchicorp.com"
-    qa = "qa.fsadykov-hello-world.fuchicorp.com"
-    prod = "fsadykov-hello-world.fuchicorp.com"
+    dev = "dev.seedoffd-hello-world.fuchicorp.com"
+    qa = "qa.seedoffd-hello-world.fuchicorp.com"
+    prod = "prod.seedoffd-hello-world.fuchicorp.com"
   }
 }
