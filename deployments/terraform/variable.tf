@@ -6,3 +6,7 @@ variable "tiller_version" {
 variable "deployment_name" {
   default = "mkarimi20-hello-world"
 }
+
+variable "deployment_environment" {
+  default = "dev"
+}
