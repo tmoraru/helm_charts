@@ -8,7 +8,7 @@ module "helm_deploy" {
   deployment_environment = "${var.deployment_environment}"
 
   # endpoint to access application 
-  deployment_endpoint = "${lookup(var.deployment_endpoint, "${var.deployment_environment)}"
+  deployment_endpoint = "${lookup(var.deployment_endpoint, "${var.deployment_environment}")}"
 
   deployment_path    = "tazagul-hello-world.fuchicorp.com"
 
