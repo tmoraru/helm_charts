@@ -3,6 +3,6 @@ variable "deployment_name" {
 }
 
 variable "tiller_version" {
-    default
+    default =
   
 }
