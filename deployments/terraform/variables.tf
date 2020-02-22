@@ -10,3 +10,12 @@ variable "deployment_name" {
 variable "deployment_environment" {
   default = "dev"
 }
+
+variable "deployment_endpoint" {
+    type = "map"
+    default = {
+        dev = "dev.rootvovak-hello-world.fuchicorp.com"
+        qa = "qa.rootvovak-hello-world.fuchicorp.com"
+        prod = "rootvovak-hello-world.fuchicorp.com"
+    }
+}
