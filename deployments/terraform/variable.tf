@@ -7,7 +7,7 @@ variable "deployment_environment" {
 variable "deployment_endpoint"{
     type = "map"
     
-    default  = {
+  default  = {
         dev  = "dev.seedoffd-hello-world.fuchicorp.com"
         qa   = "qa.seedoffd-hello-world.fuchicorp.com"
         prod = "prod.seedoffd-hello-world.fuchicorp.com"
