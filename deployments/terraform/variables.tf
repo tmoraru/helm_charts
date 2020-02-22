@@ -13,7 +13,7 @@ variable "deployment_endpoint" {
   type = "map"
   default = {
     dev = "dev.ulan-devops-hello-world.fuchicorp.com"
-    qa = "qa.ulan-devops-hello-world.fuchicorp.com"
+    qa  = "qa.ulan-devops-hello-world.fuchicorp.com"
     prod = "prod.ulan-devops-hello-world.fuchicorp.com"
   }
 }
