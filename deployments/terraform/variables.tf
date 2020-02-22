@@ -1,4 +1,4 @@
 variable "deployment_name" {
     default = "ktalant-hello-world"
 }
-variable "deployment_environemt" {}
+variable "deployment_environment" {}
