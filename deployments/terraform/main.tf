@@ -5,7 +5,7 @@ module "helm_deploy" {
   # Namespace
   deployment_environment = "test"
   # endpoint to access application
-  deployment_endpoint    = "Ulan-devops-hello-world.fuchicorp.com"
+  deployment_endpoint    = "${var.deployment_name}"
   # location of the chart
   deployment_path        = "Ulan-devops-hello-world"
   template_custom_vars = {
