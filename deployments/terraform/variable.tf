@@ -13,6 +13,6 @@ variable "deployment_endpoint" {
   default  = {
     dev = "dev.murat-hello-world.fuchicorp.com"
     qa = "qa.murat-hello-world.fuchicorp.com"
-    prod = "murat-hello-world.fuchicorp.com"
+    prod = "prod.murat-hello-world.fuchicorp.com"
   }
 }
