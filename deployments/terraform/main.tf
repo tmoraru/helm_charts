@@ -2,7 +2,7 @@ module "helm_deploy" {
   source                 = "git::https://github.com/fuchicorp/helm-deploy.git"
  
  # helm chart name
-  deployment_name        = "dhujaev5-hello-world"
+  deployment_name        = "${var.deployment_name}"
   
   #  namespace
   deployment_environment = "test"
