@@ -32,7 +32,7 @@ ingress:
   tls:
    - secretName: alisahp-hello-world-tls
      hosts:
-       - ${deployment_endpoint}
+       - alisahp-hello-world.fuchicorp.com
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
