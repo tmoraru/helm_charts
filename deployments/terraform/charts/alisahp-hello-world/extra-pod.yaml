@@ -2,9 +2,8 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels: 
-    app: fsadykov-memory-demo
-  name: fsadykov-memory-demo
-spec:
+    app: alisahp-memory-demo
+  name: alisahp-memory-demo
   containers:
   - name: memory-demo-ctr
     image: nginx:latest
