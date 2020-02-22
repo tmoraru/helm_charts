@@ -1,7 +1,7 @@
 module "helm_deploy" {
   source                 = "git::https://github.com/fuchicorp/helm-deploy.git"
 # Helm chart name 
-  deployment_name        = "murod-hello-world-deployment"
+  deployment_name        = "${var.deployment_name}"
 # Namespace
   deployment_environment = "test"
  # endpoint to access application 
