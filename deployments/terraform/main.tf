@@ -1,6 +1,6 @@
 module "helm_deploy" {
   # source                 = "git::https://github.com/fuchicorp/helm-deploy.git"
-  sourse = "fuchicorp/chart/helm"
+  source = "fuchicorp/chart/helm"
   # Helm chart name 
   deployment_name        = "${var.deployment_name}"
 
