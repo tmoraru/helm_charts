@@ -1,3 +1,3 @@
 variable "deployment_name" { #reference 
-  default = "fsadykov-hello-world"
+  default = "csamatov96-hello-world"
 }
