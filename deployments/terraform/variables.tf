@@ -3,5 +3,5 @@ variable "tiller_version" {
   description = "Please provide version of the tiller."
 }
 variable "deployment_name" {
-  default = "fsadykov-hello-world"
+  default = "murod-hello-world"
 }
