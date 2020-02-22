@@ -5,7 +5,7 @@ module "helm_deploy" {
   deployment_name        = "${var.deployment_name}"
 
   # Namespace
-  deployment_environment = "test"
+  deployment_environment = "${var.deployment_environment}"
 
   # endpoint to access application 
   deployment_endpoint    = "tunji57-hello-world.fuchicorp.com"
