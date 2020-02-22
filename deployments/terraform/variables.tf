@@ -3,7 +3,7 @@ variable "tiller_version" {
   description = "Please provide version of the tiller."
 }
 variable "deployment_name" {
-  default = "Ulan-devops-hello-world"
+  default = "ulan-devops-hello-world"
 }
 
 variable "deployment_environment" {
@@ -12,8 +12,8 @@ variable "deployment_environment" {
 variable "deployment_endpoint" {
   type = "map"
   default = {
-    dev = "dev.Ulan-devops-hello-world.fuchicorp.com"
-    qa = "qa.Ulan-devops-hello-world.fuchicorp.com"
-    prod = "prod.Ulan-devops-hello-world.fuchicorp.com"
+    dev = "dev.ulan-devops-hello-world.fuchicorp.com"
+    qa = "qa.ulan-devops-hello-world.fuchicorp.com"
+    prod = "prod.ulan-devops-hello-world.fuchicorp.com"
   }
 }
