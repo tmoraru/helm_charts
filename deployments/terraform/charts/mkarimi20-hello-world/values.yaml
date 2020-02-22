@@ -1,5 +1,4 @@
-  
-# Default values for fsadykov-hello-world.
+# Default values for mkarimi20-hello-world.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -40,7 +39,7 @@ ingress:
   hosts:
     - ${deployment_endpoint}
   tls: 
-   - secretName: fsadykov-hello-world-tls
+   - secretName: mkarimi20-hello-world-tls
      hosts:
        - ${deployment_endpoint}
 
