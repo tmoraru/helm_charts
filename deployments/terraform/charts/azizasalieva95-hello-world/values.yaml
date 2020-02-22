@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: ${deployment_image}
+  repository: ${deployment}
   tag: stable
   pullPolicy: IfNotPresent
 
