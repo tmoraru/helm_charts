@@ -8,10 +8,9 @@ module "helm_deploy" {
 
 
   template_custom_vars = {
-    deployment_image = "nginx"
-    db_host_name     = "example-db.fuchicorp.com"
-    db_user_name     = "fuchicorp-example-user"
+    deployment_image = “nginx”
   }
+}
 }
 
 
