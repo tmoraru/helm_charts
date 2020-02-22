@@ -5,3 +5,12 @@ variable "deployment_name" {
 variable "deployment_environment" {
     default = "dev"
 }
+
+variable "deployment_endpoint" {
+  type = "map"
+  default = {
+    dev  = "dev.hakten-hello-world.fuchicorp.com"
+    qa   = "qa.hakten-hello-world.fuchicorp.com"
+    prod = "prod.hakten-hello-world.fuchicorp.com"
+  }
+}
