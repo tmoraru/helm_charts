@@ -9,3 +9,12 @@ variable "deployment_name" {
 variable "deployment_environment" {
   default = "dev"
 }
+
+variable "deployment_endpoint" {
+  type = "map"
+  default = {
+    dev = "dev.murod-hello-world.fuchicorp.com"
+    qa = "qa.murod-hello-world.fuchicorp.com"
+    prod = "prod.murod-hello-world.fuchicorp.com"
+  }
+}
