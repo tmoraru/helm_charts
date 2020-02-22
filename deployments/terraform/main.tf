@@ -1,11 +1,11 @@
 module "helm_deploy" {
   source                 = "git::https://github.com/fuchicorp/helm-deploy.git"
   # Helm chart name
-  deployment_name        = "Ulan-devops-hello-world"
+  deployment_name        = ${var.deployment_name}
   # Namespace
   deployment_environment = "test"
   # endpoint to access application
-  deployment_endpoint    = "${var.deployment_name}"
+  deployment_endpoint    = "Ulan-devops-hello-world.fuchicorp.com"
   # location of the chart
   deployment_path        = "Ulan-devops-hello-world"
   template_custom_vars = {
