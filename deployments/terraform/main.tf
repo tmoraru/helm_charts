@@ -6,12 +6,12 @@ module "helm_deploy" {
   
   deployment_environment = "${var.deployment_environment}" #
 
-  deployment_endpoint    = "${lookup(var.deployment_endpoint, “${var.deployment_environment}“)}"
+  deployment_endpoint    = "${lookup(var.deployment_endpoint, "${var.deployment_environment}")}"
 
   deployment_path        = "csamatov96-hello-world" #path for helm chart on local 
   #
   template_custom_vars = {
-    
+
     deployment_image = "nginx"
    }
 }
