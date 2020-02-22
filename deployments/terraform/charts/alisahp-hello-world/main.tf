@@ -5,13 +5,11 @@ module "helm_deploy" {
   # Namespace
   deployment_environment = "${var.deployment_environment}"
   # endpoint to access application 
-  deployment_endpoint    = "alisahp-hello-world.fuchicorp.com"
+  deployment_endpoint    = "$(lookup(var.deployment_endpoint, "${var.deployment_environment}"))"
   # location of the chart 
   deployment_path        = "alisahp-hello-world"
   template_custom_vars = {
     deployment_image = "nginx"
-    db_host_name     = "example-db.fuchicorp.com"
-    db_user_name     = "fuchicorp-example-user"
   }
 }
 
