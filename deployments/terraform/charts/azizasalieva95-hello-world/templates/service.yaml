@@ -15,5 +15,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app.kubernetes.io/name: {{ include "aziasalieva95-hello-world.name" . }}
+    app.kubernetes.io/name: {{ include "azizasalieva95-hello-world.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}

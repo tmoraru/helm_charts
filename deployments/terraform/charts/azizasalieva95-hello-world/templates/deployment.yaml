@@ -1,5 +1,5 @@
 apiVersion: apps/v1beta2
-kind: deployment
+kind: Deployment
 metadata:
   name: {{ include "azizasalieva95-hello-world.fullname" . }}
   labels:
@@ -49,4 +49,3 @@ spec:
       tolerations:
 {{ toYaml . | indent 8 }}
     {{- end }}
-    

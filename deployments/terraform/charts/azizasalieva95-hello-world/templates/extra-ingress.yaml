@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-fuchicorp-prod
+    kubernetes.io/ingress.class: nginx
+  name: extra-azizasalieva95-hello-world
+spec:
+  rules:
+  - host: extra-azizasalieva95-hello-world.fuchicorp.com
+    http:
+      paths:
+      - backend:
+          serviceName: azizasalieva95-memory-demo
+          servicePort: http
+        path: /
+  tls:
+  - hosts:
+    - extra-azizasalieva95-hello-world.fuchicorp.com
+    secretName: extra-azizasalieva95-hello-world-tls
