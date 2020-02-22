@@ -3,7 +3,7 @@ variable "deployment_name" { #reference
 }
 
 variable "deployment_environment" {
-    default = "qa" #will be defined within Jenkins 
+    default = "prod" #will be defined within Jenkins 
 }
 
 variable "deployment_endpoint" {
