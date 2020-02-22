@@ -4,10 +4,10 @@ module "helm_deploy" {
   source  = "fuchicorp/chart/helm"
 
   # Helm chart name 
-  deployment_name        = "azizasalieva95-hello-world"
+  deployment_name        = "${var.deployment_name}"
 
   # Namespace
-  deployment_environment = "test"
+  deployment_environment = "${var.deployment_environment}"
 
   # endpoint to access application 
   deployment_endpoint    = "azizasalieva95-hello-world.fuchicorp.com"
