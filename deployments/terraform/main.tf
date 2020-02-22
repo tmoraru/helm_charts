@@ -1,13 +1,13 @@
 module "helm_deploy" {
   source                 = "git::https://github.com/fuchicorp/helm-deploy.git"
   # Helm chart name
-  deployment_name        = "ulan-hello-world"
+  deployment_name        = "Ulan-devops-hello-world"
   # Namespace
   deployment_environment = "test"
   # endpoint to access application
-  deployment_endpoint    = "ulan-hello-world.fuchicorp.com"
+  deployment_endpoint    = "Ulan-devops-hello-world.fuchicorp.com"
   # location of the chart
-  deployment_path        = "ulan-hello-world"
+  deployment_path        = "Ulan-devops-hello-world"
   template_custom_vars = {
     deployment_image = "nginx"
     db_host_name     = "example-db.fuchicorp.com"

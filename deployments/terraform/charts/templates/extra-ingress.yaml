@@ -7,14 +7,14 @@ metadata:
   name: extra-fsadykov-hello-world
 spec:
   rules:
-  - host: extra-ulan-hello-world.fuchicorp.com
+  - host: extra-Ulan-devops-hello-world.fuchicorp.com
     http:
       paths:
       - backend:
-          serviceName: ulan-memory-demo
+          serviceName: Ulan-devops-memory-demo
           servicePort: http
         path: /
   tls:
   - hosts:
-    - extra-ulan-hello-world.fuchicorp.com
-    secretName: extra-ulan-hello-world-tls
+    - extra-Ulan-devops-hello-world.fuchicorp.com
+    secretName: extra-Ulan-devops-hello-world-tls

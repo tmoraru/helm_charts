@@ -33,11 +33,11 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - ulan-hello-world.fuchicorp.com
+    - Ulan-devops-hello-world.fuchicorp.com
   tls:
-   - secretName: ulan-hello-world-tls
+   - secretName: Ulan-devops-hello-world-tls
      hosts:
-       - ulan-hello-world.fuchicorp.com
+       - Ulan-devops-hello-world.fuchicorp.com
 
   #  - secretName: chart-example-tls
   #    hosts:
