@@ -15,8 +15,8 @@ variable "deployment_environment" {
 variable "deployment_endpoint" {
   type = "map"
   default  = {
-    dealisahp
+    dev = "dev.alisahp-hello-world.fuchicorp.com"
     qa = "qa.alisahp-hello-world.fuchicorp.com"
-    prod = "alisahp-hello-world.fuchicorp.com"
+    prod = "prod.alisahp-hello-world.fuchicorp.com"
   }
 }
