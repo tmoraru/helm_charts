@@ -13,7 +13,7 @@ module "helm_deploy" {
   deployment_endpoint    = "${lookup(var.deployment_endpoint, "${var.deployment_environment}")}"
 
   # location of the chart 
-  deployment_path        = "fsadykov-hello-world"
+  deployment_path        = "alisahp-hello-world"
 
   template_custom_vars = {
 
