@@ -1,3 +1,7 @@
 variable "deployment_name" {
-  default = "fsadykov-hello-world"
+  default = "Ulan-devops-hello-world"
+}
+
+variable "deployment_environment" {
+  default = "dev"
 }
