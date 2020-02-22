@@ -1,5 +1,7 @@
 module "helm_deploy" {
-  source                 = "git::https://github.com/fuchicorp/helm-deploy.git"
+  # source                 = "git::https://github.com/fuchicorp/helm-deploy.git"
+  # source = "/Users/fsadykov/Projects/fuchicorp-projects/terraform-helm-chart"
+  source  = "fuchicorp/chart/helm"
 
   # Helm chart name 
   deployment_name        = "fsadykov-hello-world"
