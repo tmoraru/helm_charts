@@ -1,5 +1,5 @@
 module "helm_deploy" {
-   source  = "fuchicorp/chart/helm"
+  source  = "fuchicorp/chart/helm"
 
   # Helm chart name 
   deployment_name        = "${var.deployment_name}"
