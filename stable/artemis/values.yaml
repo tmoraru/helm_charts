@@ -16,6 +16,15 @@ service:
   type: ClusterIP
   port: 80
 
+extra_packages:
+  env:
+  - name: MESSAGE
+    value: "Hello World"
+  - name: DB_HOST
+    value: ${db_host_name}
+  - name: DB_USER
+    value: ${db_user_name}
+
 ingress:
   enabled: true
   annotations:
@@ -24,11 +33,11 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - Ulan-devops-hello-world.fuchicorp.com
+    - ulan-hello-world.fuchicorp.com
   tls:
-   - secretName: Ulan-devops-hello-world-tls
+   - secretName: ulan-hello-world-tls
      hosts:
-       - Ulan-devops-hello-world.fuchicorp.com
+       - ulan-hello-world.fuchicorp.com
 
   #  - secretName: chart-example-tls
   #    hosts:
