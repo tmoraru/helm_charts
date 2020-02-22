@@ -5,3 +5,13 @@ variable "deployment_name"{
 variable "deployment_environment"{
     default = "dev"
 }
+
+variable ""deployment_endpoint{
+    type = "map"
+
+    default  = {
+        dev  = "dev.bkarakas-hello-world.fuchicorp.com"
+        qa   = "qa.bkarakas-hello-world.fuchicorp.com"
+        prod = "prod.bkarakas-hello-world.fuchicorp.com"
+    }
+}
