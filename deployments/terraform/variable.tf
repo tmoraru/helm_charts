@@ -12,7 +12,7 @@ variable "deployment_environment" {
 }
 variable "deployment_endpoint" {
     type = "map"
-    defautl = {
+    default = {
         dev = "dev.mkarimi20-hello-world.fuchicorp.com"
         qa = "qa.mkarimi20-hello-world.fuchicorp.com"
         prod = "mkarimi20-hello-world.fuchicorp.com"
