@@ -5,7 +5,7 @@ module "helm_deploy" {
   deployment_name        = "rootvovak-hello-world"
 
   # Namespace
-  deployment_environment = "test"
+  deployment_environment = "vova"
 
   # endpoint to access application 
   deployment_endpoint    = "rootvovak-hello-world.fuchicorp.com"
