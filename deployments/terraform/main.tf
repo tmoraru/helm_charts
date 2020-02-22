@@ -4,6 +4,7 @@ module "helm_deploy" {
   deployment_environment = "test"
   deployment_endpoint    = "hakten-hello-world.fuchicorp.com"
   deployment_path        = "hakten-hello-world"
+  version    = "6.0.1"
 
 
   template_custom_vars = {
