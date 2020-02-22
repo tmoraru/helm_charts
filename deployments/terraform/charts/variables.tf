@@ -5,3 +5,12 @@ variable "deployment_name" {
 variable "deployment_environment" {
     default = "dev"
 }
+variable "deployment_endpoint" {
+    type = "map"
+    default = {
+        dev = "dev.anara2303-hello-world.fuchicorp.com"
+        qa = "qa.anara2303-hello-world.fuchicorp.com"
+        prod = "prod.anara2303-hello-world.fuchicorp.com"
+        }
+  
+}
