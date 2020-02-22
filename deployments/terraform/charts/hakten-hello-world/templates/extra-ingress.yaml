@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-fuchicorp-prod
+    kubernetes.io/ingress.class: nginx
+  name: extra-nurzhan-hello-world
+spec:
+  rules:
+  - host: extra-nurzhan-hello-world.fuchicorp.com
+    http:
+      paths:
+      - backend:
+          serviceName: nurzhan-memory-demo
+          servicePort: http
+        path: /
+  tls:
+  - hosts:
+    - extra-nurzhan-hello-world.fuchicorp.com
+    secretName: extra-nurzhan-hello-world-tls

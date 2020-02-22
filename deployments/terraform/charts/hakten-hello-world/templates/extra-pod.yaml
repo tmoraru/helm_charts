@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nurzhan-memory-demo
+  labels:
+    app: nurzhan-memory-demo
+spec:
+  containers:
+  - name: memory-demo-ctr
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+      name: http
+      protocol: TCP
+    env:
+{{ toYaml .Values.extra_packages.env | indent 4 }}
