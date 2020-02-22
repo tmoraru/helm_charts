@@ -14,8 +14,5 @@ module "helm_deploy" {
   }
 }
 
-provider "helm" {
-  version = "0.10.4"
-}
 
 
