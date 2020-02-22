@@ -6,7 +6,7 @@ variable "deployment_environment"{
     default = "dev"
 }
 
-variable ""deployment_endpoint{
+variable "deployment_endpoint"{
     type = "map"
 
     default  = {
