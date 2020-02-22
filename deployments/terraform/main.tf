@@ -3,7 +3,7 @@ module "helm_deploy" {
  
  
   deployment_name        = "${var.deployment_name}"
-  deployment_environment = "test"
+  deployment_environment = "${var.deployment_environment}"
   deployment_endpoint    = "hakten-hello-world.fuchicorp.com"
   deployment_path        = "hakten-hello-world"
 
