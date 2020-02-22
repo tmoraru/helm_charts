@@ -1,11 +1,12 @@
 module "helm_deploy" {
-  source                 = "git::https://github.com/fuchicorp/helm-deploy.git"
+  #source                 = "git::https://github.com/fuchicorp/helm-deploy.git"
+  souce ="fuchicorp/chart/helm"
 
   # Helm chart name 
-  deployment_name        = "enver0173-hello-world"
+  deployment_name        = "${var.deployment_name}"
 
   # Namespace
-  deployment_environment = "test"
+  deployment_environment = "${var.deployment_environment}"
 
   # endpoint to access application 
   deployment_endpoint    = "enver0173-hello-world.fuchicorp.com"
