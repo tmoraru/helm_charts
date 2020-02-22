@@ -1,4 +1,4 @@
-# Default values for anara2303-hello-world.
+# Default values for alisahp-hello-world.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -28,9 +28,9 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - anara2303-hello-world.fuchicorp.com
+    - alisahp-hello-world.fuchicorp.com
   tls:
-   - secretName: anara2303-hello-world-tls
+   - secretName: alisahp-hello-world-tls
      hosts:
        - ${deployment_endpoint}
 
