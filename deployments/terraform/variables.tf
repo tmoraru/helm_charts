@@ -5,3 +5,7 @@ variable "tiller_version" {
 variable "deployment_name" {
   default = "murod-hello-world"
 }
+
+variable "deployment_environment" {
+  default = "dev"
+}
