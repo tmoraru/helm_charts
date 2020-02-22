@@ -1,7 +1,7 @@
 module "helm_deploy" {
   source                 = "git::https://github.com/fuchicorp/helm-deploy.git"
   deployment_name        = "${var.deployment_name}"
-  deployment_environment = "test"
+  deployment_environment = "${deployment_environemt}"
   deployment_endpoint    = "ktalant-hello-world.fuchicorp.com"
   deployment_path        = "ktalant-hello-world"
 
