@@ -1,9 +1,10 @@
+  
 apiVersion: v1
 kind: Pod
 metadata:
-  labels: 
-    app: mkarimi20-memory-demo
   name: mkarimi20-memory-demo
+  labels:
+    app: mkarimi20-memory-demo
 spec:
   containers:
   - name: memory-demo-ctr

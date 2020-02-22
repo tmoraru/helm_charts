@@ -4,5 +4,5 @@ variable "tiller_version" {
 }
 
 variable "deployment_name" {
-  default = "mkarimi20-hello-world"
+  default = "fsadykov-hello-world"
 }

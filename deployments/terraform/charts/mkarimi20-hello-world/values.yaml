@@ -1,4 +1,5 @@
-# Default values for mkarimi20-hello-world.
+  
+# Default values for fsadykov-hello-world.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -22,6 +23,13 @@ extra_packages:
   - name: MESSAGE
     value: "Hello World"
 
+  - name: DB_HOST
+    value: ${db_host_name}
+  
+  - name: DB_USER
+    value: ${db_user_name}
+  
+
 ingress:
   enabled: true
   annotations: 
@@ -32,7 +40,7 @@ ingress:
   hosts:
     - ${deployment_endpoint}
   tls: 
-   - secretName: mkarimi20-hello-world-tls
+   - secretName: fsadykov-hello-world-tls
      hosts:
        - ${deployment_endpoint}
 
