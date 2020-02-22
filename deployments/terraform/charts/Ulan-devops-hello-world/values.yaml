@@ -26,7 +26,7 @@ ingress:
   hosts:
     - ${deployment_endpoint}
   tls:
-    - secretName: Ulan-devops-hello-world-tls
+    - secretName: ulan-devops-hello-world-tls
       hosts:
         - ${deployment_endpoint}
 
