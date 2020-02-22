@@ -1,6 +1,5 @@
-
 apiVersion: apps/v1beta2
-kind: Deployment
+kind: deployment
 metadata:
   name: {{ include "azizasalieva95-hello-world.fullname" . }}
   labels:
