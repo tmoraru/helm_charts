@@ -8,6 +8,15 @@ variable "deployment_name" {
 }
 
 variable "deployment_environment" {
-  default = "dev"
+  default = "prod"
 }
 
+
+variable "deployment_endpoint" {
+  type = "map"
+  default  = {
+    dev = "dev.fsadykov-hello-world.fuchicorp.com"
+    qa = "qa.fsadykov-hello-world.fuchicorp.com"
+    prod = "fsadykov-hello-world.fuchicorp.com"
+  }
+}
