@@ -1,5 +1,5 @@
 module "helm_deploy" {
-  source                 = "git::https://github.com/fuchicorp/helm-deploy.git"
+  source                 = "fuchicorp/chart/helm"
  
  
   deployment_name        = "${var.deployment_name}"
