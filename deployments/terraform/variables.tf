@@ -3,19 +3,20 @@ variable "tiller_version" {
   default     = "v2.11.0"
   description = "Please provide version of the tiller."
 }
-variable "deployment_name" { #reference 
+
+variable "deployment_name" { #reference to module's parameter  
     default = "csamatov96-hello-world"
 }
 
-variable "deployment_environment" {
-    default = "prod" #will be defined within Jenkins 
+variable "deployment_environment" { #the actual values will be defined within Jenkins groovy file
+    default = "dev" #reference to module's parameter  
 }
 
 variable "deployment_endpoint" {
     
-    type = "map"
+    type = "map" #???
 
-    default = {
+    default = { #the following values will be parsed to module's parameter  
         
         dev = "dev.csamatov96-hello-world.fuchicorp.com"
         qa = "qa.csamatov96-hello-world.fuchicorp.com"

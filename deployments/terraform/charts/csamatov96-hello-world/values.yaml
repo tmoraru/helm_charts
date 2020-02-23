@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: ${deployment_image}
+  repository: ${deployment_image} #that value will be parsed from terraform module  
   tag: stable
   pullPolicy: IfNotPresent
 
@@ -19,14 +19,14 @@ ingress:
   enabled: true #false 
   annotations: 
     kubernetes.io/ingress.class: nginx
-    cert-manager.io/cluster-issuer: letsencrypt-fuchicorp-prod ####
+    cert-manager.io/cluster-issuer: letsencrypt-fuchicorp-prod #HTTPS 
   path: /
   hosts: #DNS record 
-    - ${deployment_endpoint}
+    - ${deployment_endpoint} #the value will be parsed from terraform module 
   tls: 
-   - secretName: csamatov96-hello-world-tls #for https connection  
+   - secretName: csamatov96-hello-world-tls #for HTTPS connection  
      hosts:
-       - ${deployment_endpoint}
+       - ${deployment_endpoint} #the value will be parsed from terraform module
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

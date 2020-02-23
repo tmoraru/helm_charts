@@ -8,9 +8,9 @@ metadata:
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
-  type: {{ .Values.service.type }}
+  type: {{ .Values.service.type }} #will be parsed
   ports:
-    - port: {{ .Values.service.port }}
+    - port: {{ .Values.service.port }} #will be parsed
       targetPort: http
       protocol: TCP
       name: http
