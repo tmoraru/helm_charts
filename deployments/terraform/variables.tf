@@ -8,7 +8,7 @@ variable "deployment_name" {
 }
 
 variable "deployment_environment" {
-  default = "prod"
+  default = "dev"
 }
 
 
