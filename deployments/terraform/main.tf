@@ -1,14 +1,14 @@
 module "helm_deploy" {
-  source                 = "git::https://github.com/fuchicorp/helm-deploy.git"
+  source  = "fuchicorp/chart/helm"
 
   # Helm chart name 
   deployment_name        = "${var.deployment_name}"
 
   # Namespace
-  deployment_environment = "test"
+  deployment_environment = "${var.deployment_environment}"
 
   # endpoint to access application 
-  deployment_endpoint    = "mahsuda-hello-world.fuchicorp.com"
+  deployment_endpoint    = "${lookup(var.deployment_endpoint, "${var.deployment_environment}")}"
 
   # location of the chart 
   deployment_path        = "mahsuda-hello-world"
@@ -16,7 +16,6 @@ module "helm_deploy" {
   template_custom_vars = {
 
     deployment_image = "nginx"
-    db_host_name     = "example-db.fuchicorp.com"
-    db_user_name     = "fuchicorp-example-user"
+
   }
 }
