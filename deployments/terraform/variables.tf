@@ -1,3 +1,7 @@
 variable "deployment_name" {
-  default = "fsadykov-hello-world"
+  default = "mahsuda-hello-world"
+}
+
+variable "deployment_name" {
+  default = "mahsuda-hello-world"
 }
