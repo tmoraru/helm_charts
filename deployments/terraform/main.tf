@@ -1,6 +1,6 @@
 module "helm_deploy" {
   source                 = "git::https://github.com/fuchicorp/helm-deploy.git"
-  deployment_name        = "natan1988-hello-world"
+  deployment_name        = "${var.deployment_name}"
   deployment_environment = "test"
   deployment_endpoint    = "natan1988-hello-world.fuchicorpcom"
   deployment_path        = "natan1988-hello-world"
