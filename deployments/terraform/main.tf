@@ -6,14 +6,14 @@ module "helm_deploy" {
   deployment_environment = "${var.deployment_environment}"
   deployment_endpoint    = "${lookup(var.deployment_endpoint, "${var.deployment_environment}")}"
   deployment_path        = "hakten-hello-world"
-
+  deployment_image       = "nginx"
   
 
 
 
-  template_custom_vars = {
-    deployment_image = "nginx"
-  }
+  # template_custom_vars = {
+  
+  # }
 }
 
 
