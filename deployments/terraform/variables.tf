@@ -3,7 +3,7 @@ variable "deployment_name" {
 }
 
 variable "deployment_environment" {
-    default = "dev"
+    default = "prod"
 }
 
 variable "deployment_endpoint" {

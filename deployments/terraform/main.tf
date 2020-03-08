@@ -24,10 +24,10 @@ data "template_file" "hakten-hello-world-template-file" {
 }
 
 
-# resource "local_file" "hakten_helm_chart_values" {
-#   content  = "${trimspace(data.template_file.hakten-hello-world-template-file.rendered)}"
-#   filename = "charts/.cache/hakten-hello-world-template-file.yaml"
-# }
+resource "local_file" "hakten_helm_chart_values" {
+  content  = "${trimspace(data.template_file.hakten-hello-world-template-file.rendered)}"
+  filename = "charts/.cache/hakten-hello-world-template-file.yaml"
+}
 
 ## Deploy ingress controller
 resource "helm_release" "hakten-hello-world" {
