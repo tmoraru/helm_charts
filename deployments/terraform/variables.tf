@@ -9,8 +9,8 @@ variable "deployment_environment" {
 variable "deployment_endpoint" {
   type = "map"
   default = {
-    dev  = "dev.hakten-hello-world.fuchicorp.com"
-    qa   = "qa.hakten-hello-world.fuchicorp.com"
-    prod = "prod.hakten-hello-world.fuchicorp.com"
+    dev  = "dev.tazagul.net"
+    qa   = "qa.tazagul.net"
+    prod = "prod.tazagul.net"
   }
 }
