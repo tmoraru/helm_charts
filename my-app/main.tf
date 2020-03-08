@@ -17,9 +17,9 @@
 ## Deploy ingress controller
 resource "helm_release" "hakten-hello-world" {
 
-  name        = "${var.deployment_name}"
-  chart       = "./charts/hakten-hello-world"
-  namespace   = "${var.deployment_environment}"
+  name        = "${var.deployment_name}"            #required
+  chart       = "./charts/hakten-hello-world"       #required
+  namespace   = "${var.deployment_environment}"     #optional
 
   values = [
     "${data.template_file.hakten-hello-world-template-file.rendered}"
