@@ -19,6 +19,7 @@ data "template_file" "hakten-hello-world-template-file" {
 
   vars {
     deployment_endpoint = "${lookup(var.deployment_endpoint, "${var.deployment_environment}")}"
+    deployment_image    = "${var.deployment_image}"
   }
 }
 
