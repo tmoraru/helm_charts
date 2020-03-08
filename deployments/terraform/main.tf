@@ -29,13 +29,12 @@ resource "local_file" "hakten_helm_chart_values" {
 }
 
 ## Deploy ingress controller
-resource "helm_release" "ingress_controller" {
+resource "helm_release" "hakten-hello-world" {
 
   values = [
     "${data.template_file.hakten-hello-world-template-file.rendered}"
   ]
-  deployment_environment = "${var.deployment_environment}"
-  deployment_name        = "${var.deployment_name}"
+  name        = "${var.deployment_name}"
   chart     = "./charts/hakten-hello-world"
   namespace = "${var.deployment_environment}"
 }
