@@ -38,7 +38,7 @@ resource "helm_release" "hakten-hello-world" {
   deployment_endpoint = "${var.deployment_endpoint[0]}"
   deployment_image    = "${var.deployment_image}"
 
-  values = [
-    "${data.template_file.hakten-hello-world-template-file.rendered}"
-  ]
+  # values = [
+  #   "${data.template_file.hakten-hello-world-template-file.rendered}"
+  # ]
 }
