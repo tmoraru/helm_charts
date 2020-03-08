@@ -14,28 +14,31 @@
 #   }
 # }
 
-data "template_file" "hakten-hello-world-template-file" {
-  template = "${file("charts/hakten-hello-world/values.yaml")}"
+# data "template_file" "hakten-hello-world-template-file" {
+#   template = "${file("charts/hakten-hello-world/values.yaml")}"
 
-  vars {
-    deployment_endpoint = "${lookup(var.deployment_endpoint, "${var.deployment_environment}")}"
-    deployment_image    = "${var.deployment_image}"
-  }
-}
+#   vars {
+#     deployment_endpoint = "${lookup(var.deployment_endpoint, "${var.deployment_environment}")}"
+#     deployment_image    = "${var.deployment_image}"
+#   }
+# }
 
 
-resource "local_file" "hakten_helm_chart_values" {
-  content  = "${trimspace(data.template_file.hakten-hello-world-template-file.rendered)}"
-  filename = "charts/.cache/hakten-hello-world-template-file.yaml"
+# resource "local_file" "hakten_helm_chart_values" {
+#   content  = "${trimspace(data.template_file.hakten-hello-world-template-file.rendered)}"
+#   filename = "charts/.cache/hakten-hello-world-template-file.yaml"
 }
 
 ## Deploy ingress controller
 resource "helm_release" "hakten-hello-world" {
 
+  name        = "${var.deployment_name}"
+  chart       = "./charts/hakten-hello-world"
+  namespace   = "${var.deployment_environment}"
+  deployment_endpoint = "${lookup(var.deployment_endpoint, "${var.deployment_environment}")}"
+  deployment_image    = "${var.deployment_image}"
+
   values = [
     "${data.template_file.hakten-hello-world-template-file.rendered}"
   ]
-  name        = "${var.deployment_name}"
-  chart     = "./charts/hakten-hello-world"
-  namespace = "${var.deployment_environment}"
 }
