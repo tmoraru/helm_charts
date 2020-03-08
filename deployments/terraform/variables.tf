@@ -6,6 +6,11 @@ variable "deployment_environment" {
     default = "qa"
 }
 
+variable "deployment_image" {
+  default = "nginx"
+}
+
+
 variable "deployment_endpoint" {
   type = "map"
   default = {
