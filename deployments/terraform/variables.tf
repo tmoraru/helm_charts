@@ -14,3 +14,8 @@ variable "deployment_endpoint" {
     prod = "prod.tazagul.net"
   }
 }
+
+variable "deployment_image" {
+  default = "nginx"
+  
+}
