@@ -35,7 +35,7 @@ resource "helm_release" "hakten-hello-world" {
   name        = "${var.deployment_name}"
   chart       = "./charts/hakten-hello-world"
   namespace   = "${var.deployment_environment}"
-  deployment_endpoint = "${lookup(var.deployment_endpoint, "${var.deployment_environment}")}"
+  deployment_endpoint = "${var.deployment_endpoint[0]}"
   deployment_image    = "${var.deployment_image}"
 
   values = [

@@ -3,7 +3,7 @@ variable "deployment_name" {
 }
 
 variable "deployment_environment" {
-    default = "prod"
+    default = "dev"
 }
 
 variable "deployment_endpoint" {
@@ -19,3 +19,4 @@ variable "deployment_image" {
   default = "nginx"
   
 }
+
