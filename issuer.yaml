@@ -1,0 +1,13 @@
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-hostk8s-prod
+spec:
+  acme:
+    email: mr-robot95@gmail.com
+    privateKeySecretRef:
+      name: letsencrypt-hostk8s-issuer-account-key 
+    server: https://acme-v02.api.letsencrypt.org/directory
+    solvers:
+    - http01:
+        ingress:
+          class: nginx

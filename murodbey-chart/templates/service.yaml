@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "nginx.fullname" . }}
+  name: {{ include "murodbey-chart.fullname" . }}
   labels:
-    app.kubernetes.io/name: {{ include "nginx.name" . }}
-    helm.sh/chart: {{ include "nginx.chart" . }}
+    app.kubernetes.io/name: {{ include "murodbey-chart.name" . }}
+    helm.sh/chart: {{ include "murodbey-chart.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
@@ -15,5 +15,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app.kubernetes.io/name: {{ include "nginx.name" . }}
+    app.kubernetes.io/name: {{ include "murodbey-chart.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
