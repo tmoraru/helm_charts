@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-safa-g-prod
+spec:
+  acme:
+    email: safagumus05@gmail.com
+    privateKeySecretRef:
+      name: letsencrypt-safa-g-issuer-account-key
+    server: https://acme-v02.api.letsencrypt.org/directory
+    solvers:
+    - http01:
+        ingress:
+          class: nginx
