@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-hostk8s-prod
+  name: appone-service
+spec:
+  rules:
+  - host: 
+    http:
+      paths:
+        backend:
+          serviceName: appone-service
+          servicePort: http
+  tls:
+  - hosts:
+    - appone.awsumar.com
+    secretName: appone-awsumar-tls
+
