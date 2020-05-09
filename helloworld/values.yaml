@@ -1,0 +1,23 @@
+replicaCount: 1
+image:
+  repository: nginx
+  tag: stable
+  pullPolicy: IfNotPresent
+nameOverride: ""
+fullnameOverride: ""
+service:
+  type: ClusterIP
+  port: 80
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  path: /
+  hosts:
+    - tazagul.tazagul.net
+  tls:
+    - secretName: my-secret-tls
+      hosts:
+       - tazagul.tazagul.net
+
