@@ -1,12 +1,12 @@
 apiVersion: cert-manager.io/v1alpha2
 kind: ClusterIssuer
 metadata:
-  name:  letsencrypt-hostk8s-prod
+  name:  letsencrypt-awsumar-prod
 spec:
   acme:
     email: umaribaidullaev@gmail.com 
     privateKeySecretRef:
-      name: letsencrypt-hostk8s-issuer-account-key
+      name: letsencrypt-awsumar-issuer-account-key
     server: https://acme-v02.api.letsencrypt.org/directory
     solvers:
     - http01:
