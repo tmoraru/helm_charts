@@ -20,7 +20,7 @@ ingress:
   enabled: true
   annotations: 
     kubernetes.io/ingress.class: nginx
-    cert-manager.io/cluster-issuer: letsencrypt-merv3-prod
+    cert-manager.io/cluster-issuer: letsencrypt-prod. #this issuer has to match the cert when you do kubectl get clusterissuers.cert-manager.io
   path: /
   hosts:
     - mrvgms.merv3.com
